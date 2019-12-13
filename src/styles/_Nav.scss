@@ -1,0 +1,15 @@
+.Nav {
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .arrows-down {
+    margin: 0 auto 10px;
+    animation: flash 2.5s 5s ease-in-out infinite alternate;
+  }
+  .arrow-right {
+    position: absolute;
+    bottom: 120px;
+    right: 10px;
+  }
+}
