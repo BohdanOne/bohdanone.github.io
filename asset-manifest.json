@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ca5365c5.chunk.css",
+    "main.js": "/static/js/main.48ef4294.chunk.js",
+    "main.js.map": "/static/js/main.48ef4294.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b04fd9d3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b04fd9d3.js.map",
+    "static/js/2.db0320df.chunk.js": "/static/js/2.db0320df.chunk.js",
+    "static/js/2.db0320df.chunk.js.map": "/static/js/2.db0320df.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6aecd16ea1aa56fc308d2cb7e4e0087b.js": "/precache-manifest.6aecd16ea1aa56fc308d2cb7e4e0087b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.ca5365c5.chunk.css.map": "/static/css/main.ca5365c5.chunk.css.map",
+    "static/js/2.db0320df.chunk.js.LICENSE": "/static/js/2.db0320df.chunk.js.LICENSE",
+    "static/media/Zouk.mp3": "/static/media/Zouk.dfa4e760.mp3",
+    "static/media/drummer.png": "/static/media/drummer.dec7c367.png",
+    "static/media/drummer@2x.png": "/static/media/drummer@2x.39408019.png",
+    "static/media/drummer@3x.png": "/static/media/drummer@3x.6ce68fff.png",
+    "static/media/index.scss": "/static/media/reem-kufi-latin-400.98377891.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b04fd9d3.js",
+    "static/js/2.db0320df.chunk.js",
+    "static/css/main.ca5365c5.chunk.css",
+    "static/js/main.48ef4294.chunk.js"
+  ]
+}
