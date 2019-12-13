@@ -1,4 +1,5 @@
 import React from 'react';
+import Div100vh from 'react-div-100vh';
 import Header from './pages/Header';
 // import Nav from './pages/Nav';
 import AboutPage from './pages/AboutPage';
@@ -14,14 +15,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Header
-          sound={ this.state.sound }
-          onSoundChange={ this.onSoundChange }
-        />
-        <AboutPage sound={ this.state.sound } />
-        {/* <Nav /> */}
-     </div>
+      <Div100vh>
+        <div className="App">
+          <Header
+            sound={ this.state.sound }
+            onSoundChange={ this.onSoundChange }
+            />
+          <AboutPage sound={ this.state.sound } />
+          {/* <Nav /> */}
+        </div>
+      </Div100vh>
     );
   }
 }
