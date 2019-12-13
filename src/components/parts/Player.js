@@ -26,7 +26,7 @@ class Player extends React.Component {
       let WIDTH = window.innerWidth;
       let HEIGHT = canvas.height;
 
-      analyser.fftSize = 256;
+      analyser.fftSize = 512;
       const bufferLength = analyser.fftSize;
       const dataArray = new Uint8Array(bufferLength);
 

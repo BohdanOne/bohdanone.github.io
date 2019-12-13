@@ -16,7 +16,12 @@ const AboutPage = props => {
         </h1>
         <h2 className="sub-header">
           <span className="play-drums">I play drums...</span>
-          <span className="make-apps">..and make apps!</span>
+          <span className="click-me">
+            <span role="img" aria-label="Backhand Index Pointing Left">👈 </span>
+            click me to listen
+            <span role="img" aria-label="Drum"> 🥁</span>
+          </span>
+          <span className="make-apps"><a href="https://github.com/BohdanOne">...and make apps!</a></span>
         </h2>
         <Player
           sound={ props.sound }
@@ -27,7 +32,7 @@ const AboutPage = props => {
           imgAlt="Bohdan Imiela play drums"
         />
         <p className="disclaimer">
-          Site under construction. Come back soon!
+          Site under developement. Come back soon!
         </p>
       </div>
     </section>
