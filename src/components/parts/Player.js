@@ -100,7 +100,6 @@ class Player extends React.Component {
   render() {
     return (
       <>
-        <canvas id="canvas"></canvas>
         <img
           id={ this.props.imgId }
           className={ this.props.imgClass }
