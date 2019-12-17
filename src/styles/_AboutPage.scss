@@ -87,3 +87,27 @@
     text-align: center;
   }
 }
+
+@media (orientation: landscape) and (max-width: 812px) {
+  .AboutPage {
+    grid-template-rows: 100px minmax(200px, 1fr) 30px;
+    overflow: hidden;
+    .main-header{
+      .bohdan {
+        align-self: auto;
+        margin-left: 30px;
+      }
+    }
+    .main-display {
+      width: 90%;
+      .make-apps {
+        padding-top: 40px;
+        position: initial;
+      }
+    }
+    .disclaimer {
+      text-align: right;
+      padding-right: .6rem;
+    }
+  }
+}
