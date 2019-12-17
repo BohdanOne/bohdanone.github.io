@@ -35,9 +35,9 @@ const AboutPage = props => {
             <p className="make-apps"><a href="https://github.com/BohdanOne">...and I make apps!</a></p>
         </div>
 
-        <p className="disclaimer">
+        <footer className="disclaimer">
           Site under developement. Come back soon!
-        </p>
+        </footer>
       </section>
     </>
   );

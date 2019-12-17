@@ -26,6 +26,11 @@ canvas {
   z-index: -1;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .get-attention {
   fill: $hover-col;
   transform: scale(1.3);

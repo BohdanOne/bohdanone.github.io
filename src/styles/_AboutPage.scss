@@ -73,8 +73,10 @@
       shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
       -webkit-shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
       shape-margin: 10px;
+      transition: transform .5s;
       &:hover {
         cursor: pointer;
+        transform: rotate(3deg);
       }
     }
   }
