@@ -90,7 +90,7 @@
 
 @media (orientation: landscape) and (max-width: 812px) {
   .AboutPage {
-    grid-template-rows: 100px minmax(200px, 1fr) 30px;
+    grid-template-rows: minmax(70px, 90px) minmax(200px, 1fr) 20px;
     overflow: hidden;
     .main-header{
       .bohdan {
@@ -103,6 +103,13 @@
       .make-apps {
         padding-top: 40px;
         position: initial;
+      }
+      .drummer {
+        height: 200px;
+        -webkit-clip-path: none;
+        clip-path: none;
+        shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        -webkit-shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
       }
     }
     .disclaimer {
