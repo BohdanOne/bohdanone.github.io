@@ -10,20 +10,21 @@ class Player extends React.Component {
       this.audio = new Audio(this.props.audioSource);
       const audioElement = this.ctx.createMediaElementSource(this.audio);
       audioElement.connect(this.ctx.destination);
-      this.analyser = this.ctx.createAnalyser();
-      audioElement.connect(this.analyser);
-      this.waveform(this.analyser);
+      const analyser = this.ctx.createAnalyser();
+      audioElement.connect(analyser);
+      this.waveform(analyser);
     }
   };
 
   waveform = analyser => {
     const canvas = document.getElementById('canvas');
     const canvasContext = canvas.getContext('2d');
+    canvas.setAttribute('width', window.innerWidth);
 
     visualize();
 
     function visualize() {
-      let WIDTH = window.innerWidth;
+      let WIDTH = canvas.width;
       let HEIGHT = canvas.height;
 
       analyser.fftSize = 512;
@@ -31,6 +32,7 @@ class Player extends React.Component {
       const dataArray = new Uint8Array(bufferLength);
 
       canvasContext.clearRect(0, 0, WIDTH, HEIGHT);
+
       const draw = function () {
         requestAnimationFrame(draw);
         analyser.getByteTimeDomainData(dataArray);
@@ -42,7 +44,7 @@ class Player extends React.Component {
 
         canvasContext.beginPath();
 
-        const sliceWidth = WIDTH * 1.5 / bufferLength;
+        const sliceWidth = WIDTH / bufferLength;
         let x = 0;
         for (let i = 0; i < bufferLength; i++) {
           const v = dataArray[i] / 128.0;
@@ -59,7 +61,7 @@ class Player extends React.Component {
 
         canvasContext.lineTo(canvas.width, canvas.height / 2);
         canvasContext.stroke();
-      }
+      };
 
       draw();
    }
