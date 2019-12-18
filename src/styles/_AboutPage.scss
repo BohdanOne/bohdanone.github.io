@@ -78,6 +78,9 @@
         cursor: pointer;
         transform: rotate(3deg);
       }
+      &:focus {
+        transform: rotate(3deg);
+      }
     }
   }
 

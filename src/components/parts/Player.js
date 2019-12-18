@@ -109,7 +109,10 @@ class Player extends React.Component {
           srcSet={ `${this.props.imgSrc[0]}, ${this.props.imgSrc[1]} 2x, ${this.props.imgSrc[2]} 3x` }
           alt={ this.props.imgAlt }
           onClick={ () => this.onPlayerClick(this.props.sound) }
+          onKeyPress={ () => this.onPlayerClick(this.props.sound) }
           data-playing="false"
+          tabIndex="0"
+          role="button"
         />
       </>
     );
