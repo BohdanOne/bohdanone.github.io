@@ -4,7 +4,7 @@ class Player extends React.Component {
   canPlay = false;
 
   componentDidMount() {
-    if(this.props.sound === 'on') {
+    if(this.props.sound) {
       const AudioContext = window.AudioContext || window.webkitAudioContext;
       this.ctx = new AudioContext();
       this.audio = new Audio(this.props.audioSource);
@@ -69,7 +69,7 @@ class Player extends React.Component {
 
   componentDidUpdate() {
     this.canPlay = false;
-    if(this.props.sound === 'off') {
+    if(this.props.sound === false) {
       this.audio.src = '';
       this.audio.load();
     } else {
@@ -86,7 +86,7 @@ class Player extends React.Component {
   };
 
   onPlayerClick = sound => {
-    if(sound === 'off') {
+    if(sound === false) {
       this.noSoundNotification();
     } else {
       this.canPlay = !this.canPlay;

@@ -6,6 +6,8 @@ import reducers from './reducers';
 import './styles/index.scss';
 import App from './components/App';
 
+import { compose } from 'redux';
+
 const root = document.getElementById('root');
 
 document.addEventListener('DOMContentLoaded',() => {
@@ -15,8 +17,13 @@ document.addEventListener('DOMContentLoaded',() => {
   }
 });
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers());
+
+// const store = createStore(reducers, {});
+
 ReactDOM.render(
-  <Provider store={ createStore(reducers, {})}>
+  <Provider store={store}>
     <App />
   </Provider>,
   root
