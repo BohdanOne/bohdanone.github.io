@@ -69,7 +69,7 @@ class Player extends React.Component {
 
   componentDidUpdate() {
     this.canPlay = false;
-    if(this.props.sound === false) {
+    if(!this.props.sound) {
       this.audio.src = '';
       this.audio.load();
     } else {
@@ -86,7 +86,7 @@ class Player extends React.Component {
   };
 
   onPlayerClick = sound => {
-    if(sound === false) {
+    if(!sound) {
       this.noSoundNotification();
     } else {
       this.canPlay = !this.canPlay;
