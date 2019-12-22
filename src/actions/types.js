@@ -1,0 +1,1 @@
+export const TOGGLE_SOUND = 'toggle_sound';
