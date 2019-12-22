@@ -1,7 +1,6 @@
 import React from 'react';
 
 class Player extends React.Component {
-  canPlay = false;
 
   componentDidMount() {
     if(this.props.sound) {
@@ -68,7 +67,6 @@ class Player extends React.Component {
   };
 
   componentDidUpdate() {
-    this.canPlay = false;
     if(!this.props.sound) {
       this.audio.src = '';
       this.audio.load();
@@ -89,8 +87,7 @@ class Player extends React.Component {
     if(!sound) {
       this.noSoundNotification();
     } else {
-      this.canPlay = !this.canPlay;
-      if (this.canPlay){
+      if (this.audio.duration === 0 || this.audio.paused){
         this.ctx.resume();
         this.audio.play();
       } else {
