@@ -6,7 +6,7 @@ import drummer2x from '../../assets/images/drummer@2x.png';
 import drummer3x from '../../assets/images/drummer@3x.png';
 import zouk from '../../assets/sounds/Zouk.mp3';
 
-const AboutPage = props => {
+export default props => {
   return (
     <>
       <canvas id="canvas"></canvas>
@@ -42,5 +42,3 @@ const AboutPage = props => {
     </>
   );
 };
-
-export default AboutPage;

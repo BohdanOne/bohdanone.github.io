@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hamburger = props => {
+export default props => {
   return (
     <div role="button" onClick={ props.onClick }>
       <svg className="icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -9,5 +9,3 @@ const Hamburger = props => {
     </div>
   );
 };
-
-export default Hamburger;
