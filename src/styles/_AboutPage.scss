@@ -56,7 +56,7 @@
         text-align: center;
         font-size: 1.6rem;
         opacity: 0;
-        animation: fade-in 1.2s 4.5s ease-in-out forwards;
+        animation: fade-in 1.5s 5s ease-in-out forwards;
         a {
           color: $primary-col;
           transition: color .3s;
@@ -74,15 +74,16 @@
       shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
       -webkit-shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
       shape-margin: 10px;
-      transition: transform .5s;
+      transition: filter .5s;
       opacity: 0;
-      animation: fade-in 2s 2s ease-in-out forwards;
+      animation: slide-in 1s 2s ease-out forwards;
       &:hover {
         cursor: pointer;
-        transform: rotate(3deg);
+        filter: brightness(.7) sepia(60%);
       }
       &:focus {
-        transform: rotate(3deg);
+        filter: brightness(.7) sepia(60%);
+        outline: none;
       }
     }
   }

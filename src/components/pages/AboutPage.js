@@ -1,5 +1,5 @@
 import React from 'react';
-import Player from '../parts/Player';
+import PlayerImage from '../parts/PlayerImage';
 
 import drummer from '../../assets/images/drummer.png';
 import drummer2x from '../../assets/images/drummer@2x.png';
@@ -10,13 +10,15 @@ export default props => {
   return (
     <>
       <canvas id="canvas"></canvas>
+
       <section className="AboutPage">
         <h1 className="main-header">
           <span className="hi">Hi!</span>
           <span className="bohdan">I'm Bohdan</span>
         </h1>
+
         <div className="main-display">
-          <Player
+          <PlayerImage
             sound={ props.sound }
             audioSource={ zouk }
             imgId="drummer"
