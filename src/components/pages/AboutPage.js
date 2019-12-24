@@ -1,10 +1,9 @@
 import React from 'react';
-import PlayerImage from '../parts/PlayerImage';
+import AudioTogglingImage from '../parts/AudioTogglingImage';
 
 import drummer from '../../assets/images/drummer.png';
 import drummer2x from '../../assets/images/drummer@2x.png';
 import drummer3x from '../../assets/images/drummer@3x.png';
-import zouk from '../../assets/sounds/Zouk.mp3';
 
 export default props => {
   return (
@@ -18,10 +17,8 @@ export default props => {
         </h1>
 
         <div className="main-display">
-          <PlayerImage
+          <AudioTogglingImage
             sound={ props.sound }
-            audioSource={ zouk }
-            imgId="drummer"
             imgClass="drummer"
             imgSrc={ [drummer, drummer2x, drummer3x] }
             imgAlt="Bohdan Imiela play drums"
