@@ -1,7 +1,12 @@
 export default () => {
-  const soundIcon = document.getElementById('soundIcon');
-  soundIcon.classList.add('get-attention');
+  const soundIconSVG = document.querySelector('.sound-toggler').querySelector('path');
+  const flash = setInterval(() => {
+    soundIconSVG.setAttribute('fill','#ffa600');
+    setTimeout(() => {
+      soundIconSVG.removeAttribute('fill','#ffa600');
+    }, 200);
+  }, 400);
   setTimeout(() => {
-    soundIcon.classList.remove('get-attention');
-  }, 500);
+    clearInterval(flash);
+  }, 2100);
 };
