@@ -1,6 +1,6 @@
 import React from 'react';
-import noSoundNotification from '../../audio-player-helpers/noSoundNotification';
-import audioPlayer from '../../audio-player-helpers/audioPlayer';
+import noSoundNotification from '../../audio-player/noSoundNotification';
+import audioPlayer from '../../audio-player/audioPlayer';
 
 class AudioTogglingImage extends React.Component {
   state = {
