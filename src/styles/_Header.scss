@@ -8,8 +8,11 @@
   width: 100%;
   z-index: 10;
   nav {
+    display: flex;
+    justify-content: flex-end;
     .nav-button {
       @extend .icon;
+      text-decoration: none;
       color: var(--primary-col);
       padding: .2em 1em;
       font-weight: 500;

@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Header from './pages/Header';
-import AboutPage from './pages/AboutPage';
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const SkillsPage = lazy(() => import('./pages/SkillsPage'));
 
 const App = props => {
   return (
-    <div className="App">
-      <Header />
-      <AboutPage sound={ props.sound } />
-    </div>
+    <Router>
+      <div className="App">
+{/* TODO loader component */}
+        <Suspense fallback={<div>Loading ...</div>}>
+          <Header />
+          <Switch>
+            <Route
+              exact path="/"
+              component={ AboutPage }
+            />
+            <Route path="/skills" component={ SkillsPage }/>
+          </Switch>
+        </Suspense>
+      </div>
+    </Router>
   );
 };
 

@@ -5,7 +5,7 @@ import drummer from '../../assets/images/drummer.png';
 import drummer2x from '../../assets/images/drummer@2x.png';
 import drummer3x from '../../assets/images/drummer@3x.png';
 
-export default props => {
+export default () => {
   return (
     <>
       <canvas id="canvas"></canvas>
@@ -17,21 +17,22 @@ export default props => {
         </h1>
 
         <div className="main-display">
+
           <AudioTogglingImage
-            sound={ props.sound }
             imgClass="drummer"
             imgSrc={ [drummer, drummer2x, drummer3x] }
             imgAlt="Bohdan Imiela play drums"
           />
-            <p className="play-drums">
-              <span>I play drums...</span><br/>
-              <span className="click-me">
-                <span role="img" aria-label="Backhand Index Pointing Left">👈 </span>
-                click me to listen
-                <span role="img" aria-label="Drum"> 🥁</span>
-              </span>
-            </p>
-            <p className="make-apps"><a href="https://github.com/BohdanOne">...and I make apps!</a></p>
+
+          <p className="play-drums">
+            <span>I play drums...</span><br/>
+            <span className="click-me">
+              <span role="img" aria-label="Backhand Index Pointing Left">👈 </span>
+              click me to listen
+              <span role="img" aria-label="Drum"> 🥁</span>
+            </span>
+          </p>
+          <p className="make-apps"><a href="https://github.com/BohdanOne">...and I make apps!</a></p>
         </div>
 
         <footer className="disclaimer">
