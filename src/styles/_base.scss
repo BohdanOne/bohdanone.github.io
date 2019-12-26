@@ -45,25 +45,21 @@ button {
 
 .icon {
   border-radius: .5em;
-  box-shadow:
-    -.3em -.3em .6em rgba(255,255,255,.7),
-    .3em .3em .6em rgba(111, 111, 143,.3);
+  box-shadow: var(--shadow);
   height: 2.2rem;
-  width: 2.2rem;
+  min-width: 2.2rem;
   margin: .6rem;
   padding: .2em;
   cursor: pointer;
-  fill: $primary-col;
+  fill: var(--primary-col);
   z-index: 10;
   transition:
     transform .2s ease-in-out,
     fill .2s ease-in-out;
     &:hover {
-      fill: $hover-col;
+      fill: var(--hover-col);
     }
     &:active {
-      box-shadow:
-        inset -.3em -.3em .6em rgba(255,255,255,.7),
-        inset .3em .3em .6em rgba(111, 111, 143,.3);
+      box-shadow: var(--inset-shadow)
     }
 }

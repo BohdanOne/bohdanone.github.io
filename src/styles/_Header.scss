@@ -7,4 +7,18 @@
   position: relative;
   width: 100%;
   z-index: 10;
+  .nav-button {
+    @extend .icon;
+    color: var(--primary-col);
+    padding: .2em 1em;
+    font-weight: 500;
+    transition: color .2s ease-in-out;
+    &:hover {
+      color: var(--hover-col);
+    }
+    &[aria-pressed="true"] {
+      box-shadow: var(--inset-shadow);
+    }
+  }
 }
+

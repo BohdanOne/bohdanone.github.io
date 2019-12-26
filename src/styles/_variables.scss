@@ -1,8 +1,16 @@
-$primary-col: #000;
-$secondary-col: #ffa600;
-$ternary-col: #7509b3;
-$ternary-light-col: #8914cc;
-$hover-col: #b37a12;
-$flash-col: #19ff85;
-$opposite-col: #004fb3;
-$opposite-light-col: #0070ff;
+:root {
+  --primary-col: #000;
+  --secondary-col: #ffa600;
+  --ternary-col: #7509b3;
+  --ternary-light-col: #8914cc;
+  --hover-col: #b37a12;
+  --flash-col: #19ff85;
+  --opposite-col: #004fb3;
+  --opposite-light-col: #0070ff;
+  --shadow:
+    -.2em -.2em .4em rgba(255,255,255,.7),
+    .2em .2em .4em rgba(111, 111, 143,.3);
+  --inset-shadow:
+    inset -.2em -.2em .4em rgba(255,255,255,.7),
+    inset .2em .2em .4em rgba(111, 111, 143,.3);
+}

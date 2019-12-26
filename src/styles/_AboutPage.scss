@@ -58,10 +58,10 @@
         opacity: 0;
         animation: fade-in 1.5s 5s ease-in-out forwards;
         a {
-          color: $primary-col;
+          color: var(--primary-col);
           transition: color .3s;
           &:hover {
-            color: $hover-col;
+            color: var(--hover-col);
             cursor: pointer;
           }
         }
