@@ -6,7 +6,8 @@ import audioPlayer from '../../audio-player/audioPlayer';
 class AudioTogglingImage extends React.Component {
   state = {
     audio: null,
-    ctx: null
+    ctx: null,
+    isPlaying: false
   };
 
   componentDidMount() {
@@ -17,14 +18,18 @@ class AudioTogglingImage extends React.Component {
   };
 
   componentDidUpdate() {
-    if (this.state.audio) {
-      if(!this.props.sound && this.state.audio.duration > 0) {
-        this.state.audio.pause();
-      } else if (this.props.sound && this.state.audio.duration > 0) {
+    if (this.props.sound && this.state.isPlaying) {
+      if (this.state.audio) {
+        this.state.ctx.resume();
         this.state.audio.play();
+      } else {
+        const [audio, ctx] = audioPlayer();
+        this.setState({audio, ctx});
       }
+    } else {
+      this.state.audio && this.state.audio.pause();
     }
-  };
+  }
 
   async componentWillUnmount() {
     if(this.state.ctx) {
@@ -32,18 +37,13 @@ class AudioTogglingImage extends React.Component {
     }
   }
 
-  playSound = (ctx, audio) => {
-    if(audio) {
-      if (audio.duration === 0 || audio.paused) {
-        ctx.resume();
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    }
-  ;}
+  playSound = () => this.setState({ isPlaying: ! this.state.isPlaying });
 
-  onImageInteraction = sound => !sound ?noSoundNotification() : this.playSound(this.state.ctx, this.state.audio);
+  onImageInteraction = sound => {
+    !sound ?
+      noSoundNotification() :
+      this.playSound();
+  }
 
   render() {
     return (
