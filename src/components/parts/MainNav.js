@@ -6,7 +6,7 @@ class MainNav extends React.Component {
     return (
       <nav>
         <NavButton route="/" text="about" isPressed="true" />
-        <NavButton route="/skills" text="skills" isPressed="false"/>
+        {/* <NavButton route="/skills" text="skills" isPressed="false"/> */}
 
         {/* <button className="nav-button" aria-pressed="false">
           projects
