@@ -1,9 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import audioSource from '../../assets/sounds/fx.mp3';
 
 class NavButton extends React.Component {
-  playSound = () => {
-    console.log('BIP')
+  playSound = sound => {
+    if (sound) {
+      const audio = new Audio(audioSource);
+      audio.play();
+    }
   }
 
   render() {
@@ -22,4 +27,8 @@ class NavButton extends React.Component {
   }
 }
 
-export default NavButton;
+const mapStateToProps = state => {
+  return { sound: state.sound.isOn};
+}
+
+export default connect(mapStateToProps)(NavButton);
