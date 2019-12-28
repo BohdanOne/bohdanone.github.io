@@ -8,7 +8,7 @@ import drummer3x from '../../assets/images/drummer@3x.png';
 
 export default () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1}} exit={{ opacity: 0 }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1}} exit={{ opacity: 0 }} transition={{ ease: "easeIn", duration: .3 }}>
 
       <canvas id="canvas"></canvas>
 
@@ -27,7 +27,7 @@ export default () => {
           />
 
           <p className="play-drums">
-            <span>I play drums...</span><br/>
+            <span>I play drums ...</span><br/>
             <span className="click-me">
               <span role="img" aria-label="Backhand Index Pointing Left">👈 </span>
               click me to listen

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default () => {
   return (
-    <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1}}>
+    <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1}} transition={{ ease: "easeIn", duration: .3 }}>
       <section className="SkillsPage">
         <h2 className="skills-header">
           my skills header

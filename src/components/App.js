@@ -14,7 +14,7 @@ const App = props => {
 {/* TODO loader component */}
         <Suspense fallback={<div>Loading ...</div>}>
           <Header />
-          <AnimatePresence>
+          <AnimatePresence exitBeforeEnter>
             <Switch>
               <Route
                 exact path="/"
