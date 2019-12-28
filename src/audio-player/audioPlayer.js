@@ -1,5 +1,4 @@
-// import visualizeAudio from'./visualizeAudio';
-
+import visualizeAudio from'./visualizeAudio';
 
 export default audioSource => {
   const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -7,8 +6,8 @@ export default audioSource => {
   const audio = new Audio(audioSource);
   const audioElement = ctx.createMediaElementSource(audio);
   audioElement.connect(ctx.destination);
-  // const analyser = ctx.createAnalyser();
-  // audioElement.connect(analyser);
-  // visualizeAudio(analyser);
-  return [audio, ctx, audioElement];
+  const analyser = ctx.createAnalyser();
+  audioElement.connect(analyser);
+  visualizeAudio(analyser);
+  return [audio, ctx];
 }
