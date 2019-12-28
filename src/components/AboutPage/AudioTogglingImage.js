@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import noSoundNotification from '../../audio-player/noSoundNotification';
-import audioPlayer from '../../audio-player/audioPlayer';
+import noSoundNotification from './audio-player/noSoundNotification';
+import audioPlayer from './audio-player/audioPlayer';
 import audioSource from '../../assets/sounds/Zouk.mp3';
 
 

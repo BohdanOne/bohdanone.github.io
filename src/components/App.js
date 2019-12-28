@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
 import * as actions from '../actions';
-import Header from './pages/Header';
-const AboutPage = lazy(() => import('./pages/AboutPage'));
-const SkillsPage = lazy(() => import('./pages/SkillsPage'));
+import Header from './Header/Header';
+const AboutPage = lazy(() => import('./AboutPage/AboutPage'));
+const SkillsPage = lazy(() => import('./SkillsPage/SkillsPage'));
 
 const App = props => {
   return (

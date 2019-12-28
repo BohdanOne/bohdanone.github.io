@@ -1,5 +1,5 @@
 import React from 'react';
-import AudioTogglingImage from '../parts/AudioTogglingImage';
+import AudioTogglingImage from './AudioTogglingImage';
 import { motion } from 'framer-motion';
 
 import drummer from '../../assets/images/drummer.png';
