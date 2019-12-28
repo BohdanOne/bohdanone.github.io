@@ -1,36 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import NavButton from './NavButton';
 import audioSource from '../../assets/sounds/fx.mp3';
 
-class MainNav extends React.Component {
-  state = { active: 'about' };
+const MainNav = props => {
+  const [active, setActive] = useState('about');
 
-  handleClick = e => {
-    if (e.target.innerText !== this.state.active) {
-      if (this.props.sound) {
+  const handleClick = e => {
+    if (e.target.innerText !== active) {
+      if (props.sound) {
         const audio = new Audio(audioSource);
         audio.play();
       }
-      this.setState({ active: e.target.innerText });
     }
+    setActive(e.target.innerText)
   }
-
-  render() {
-    return (
-      <nav>
-        <NavButton route="/" text="about" active={ this.state.active } onClick={this.handleClick}/>
-        <NavButton route="/skills" text="skills" active={ this.state.active } onClick={this.handleClick}/>
-
-        {/* <button className="nav-button" aria-pressed="false">
-          projects
-          </button>
-          <button className="nav-button" aria-pressed="false">
-          contact
-        </button> */}
-      </nav>
-    );
-  }
+  return (
+    <nav>
+      <NavButton route="/" text="about" active={ active } onClick={ handleClick }/>
+      <NavButton route="/skills" text="skills" active={ active } onClick={ handleClick }/>
+    </nav>
+  );
 }
 
 const mapStateToProps = state => {
