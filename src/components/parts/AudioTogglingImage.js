@@ -2,18 +2,23 @@ import React from 'react';
 import { connect } from 'react-redux';
 import noSoundNotification from '../../audio-player/noSoundNotification';
 import audioPlayer from '../../audio-player/audioPlayer';
+import visualizeAudio from '../../audio-player/visualizeAudio';
+
+import audioSource from '../../assets/sounds/Zouk.mp3';
+
 
 class AudioTogglingImage extends React.Component {
   state = {
     audio: null,
     ctx: null,
+    audioElement: null,
     isPlaying: false
   };
 
   componentDidMount() {
     if(this.props.sound) {
-      const [audio, ctx] = audioPlayer();
-      this.setState({audio, ctx});
+      const [audio, ctx, audioElement] = audioPlayer(audioSource);
+      this.setState({audio, ctx, audioElement});
     }
   };
 
@@ -22,9 +27,13 @@ class AudioTogglingImage extends React.Component {
       if (this.state.audio) {
         this.state.ctx.resume();
         this.state.audio.play();
+
+        const analyser = this.state.ctx.createAnalyser();
+        this.state.audioElement.connect(analyser);
+        visualizeAudio(analyser);
       } else {
-        const [audio, ctx] = audioPlayer();
-        this.setState({audio, ctx});
+        const [audio, ctx, audioElement] = audioPlayer(audioSource);
+        this.setState({audio, ctx, audioElement});
       }
     } else {
       this.state.audio && this.state.audio.pause();
