@@ -1,8 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-export default props => {
+export default () => {
   return (
-    <>
+    <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1}}>
       <section className="SkillsPage">
         <h2 className="skills-header">
           my skills header
@@ -14,6 +15,6 @@ export default props => {
           Site under developement. Come back soon!
         </footer>
       </section>
-    </>
+    </motion.div>
   );
 };

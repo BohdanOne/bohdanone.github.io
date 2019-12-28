@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { AnimatePresence } from 'framer-motion';
 import * as actions from '../actions';
 import Header from './pages/Header';
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -13,13 +14,15 @@ const App = props => {
 {/* TODO loader component */}
         <Suspense fallback={<div>Loading ...</div>}>
           <Header />
-          <Switch>
-            <Route
-              exact path="/"
-              component={ AboutPage }
-            />
-            <Route path="/skills" component={ SkillsPage }/>
-          </Switch>
+          <AnimatePresence>
+            <Switch>
+              <Route
+                exact path="/"
+                component={ AboutPage }
+                />
+              <Route path="/skills" component={ SkillsPage }/>
+            </Switch>
+          </AnimatePresence>
         </Suspense>
       </div>
     </Router>
