@@ -1,36 +1,34 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { AnimatePresence } from 'framer-motion';
-import * as actions from '../actions';
+import { Route, Switch, useLocation } from 'react-router-dom';
+import { useSpring, useTransition, animated } from 'react-spring';
 import Header from './Header/Header';
 const AboutPage = lazy(() => import('./AboutPage/AboutPage'));
 const SkillsPage = lazy(() => import('./SkillsPage/SkillsPage'));
 
-const App = props => {
+export default () => {
+  const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
+
+  const location = useLocation();
+  const transitions = useTransition(location, location => location.pathname, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 }
+  });
+
   return (
-    <Router>
-      <div className="App">
+    <animated.div className="App" style={ fade }>
 {/* TODO loader component */}
-        <Suspense fallback={<div>Loading ...</div>}>
-          <Header />
-          <AnimatePresence exitBeforeEnter>
-            <Switch>
-              <Route
-                exact path="/"
-                component={ AboutPage }
-                />
-              <Route path="/skills" component={ SkillsPage }/>
-            </Switch>
-          </AnimatePresence>
-        </Suspense>
-      </div>
-    </Router>
+      <Suspense fallback={<div>Loading ...</div>}>
+        <Header />
+          {transitions.map(({ item, props, key }) => (
+            <animated.main key={ key } style={ props }>
+              <Switch location={ item }>
+                <Route exact path="/" component={ AboutPage }/>
+                <Route exact path="/skills" component={ SkillsPage }/>
+              </Switch>
+            </animated.main>
+          ))}
+      </Suspense>
+    </animated.div>
   );
 };
-
-const mapStateToProps = state => {
-  return { sound: state.sound.isOn };
-};
-
-export default connect(mapStateToProps, actions)(App);

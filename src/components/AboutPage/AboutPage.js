@@ -1,6 +1,5 @@
 import React from 'react';
 import AudioTogglingImage from './AudioTogglingImage';
-import { motion } from 'framer-motion';
 
 import drummer from '../../assets/images/drummer.png';
 import drummer2x from '../../assets/images/drummer@2x.png';
@@ -8,11 +7,9 @@ import drummer3x from '../../assets/images/drummer@3x.png';
 
 export default () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1}} exit={{ opacity: 0 }} transition={{ ease: "easeIn", duration: .3 }}>
-
-      <canvas id="canvas"></canvas>
 
       <section className="AboutPage">
+        <canvas id="canvas"></canvas>
         <h1 className="main-header">
           <span className="hi">Hi!</span>
           <span className="bohdan">I'm Bohdan</span>
@@ -41,6 +38,6 @@ export default () => {
           Site under developement. Come back soon!
         </footer>
       </section>
-    </motion.div>
+
   );
 };

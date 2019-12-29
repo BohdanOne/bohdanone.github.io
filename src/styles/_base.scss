@@ -28,14 +28,14 @@ body {
   z-index: 1;
 }
 
-@media (orientation: landscape) and (max-width: 812px) {
-  html {
-    font-size: 14px;
-  }
-  body {
-    background: #fff;
-  }
-}
+// @media (orientation: landscape) and (max-width: 812px) {
+//   html {
+//     font-size: 14px;
+//   }
+//   body {
+//     background: #fff;
+//   }
+// }
 
 canvas {
   left: 0;
