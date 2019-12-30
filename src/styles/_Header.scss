@@ -4,7 +4,6 @@
   left: 0;
   display: flex;
   justify-content: flex-end;
-  position: relative;
   width: 100%;
   z-index: 10;
   nav {
@@ -27,3 +26,14 @@
   }
 }
 
+@media (max-width: 650px) {
+  .nav-button {
+    display: none;
+  }
+}
+
+@media (min-width: 650px) {
+  .hamburger {
+    display: none;
+  }
+}

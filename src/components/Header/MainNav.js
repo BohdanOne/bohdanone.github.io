@@ -16,9 +16,11 @@ const MainNav = props => {
     setActive(e.target.innerText)
   }
   return (
-    <nav>
+    <nav className="MainNav">
       <NavButton route="/" text="about" active={ active } onClick={ handleClick }/>
       <NavButton route="/skills" text="skills" active={ active } onClick={ handleClick }/>
+      <NavButton route="/projects" text="projects" active={ active } onClick={ handleClick }/>
+      <NavButton route="/contact" text="contact" active={ active } onClick={ handleClick }/>
     </nav>
   );
 }
