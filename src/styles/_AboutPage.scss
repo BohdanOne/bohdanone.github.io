@@ -1,7 +1,7 @@
 .AboutPage {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(100px, 300px) minmax(300px, 1fr) 50px;
+  grid-template-rows: minmax(100px, 200px) minmax(300px, 1fr) 30px;
   position: absolute;
   top: 0;
   left: 0;
@@ -18,13 +18,13 @@
       width: max-content;
     }
     .bohdan {
-      align-self: center;
+      align-self: flex-end;
       height: max-content;
       width: max-content;
       font-size: 2rem;
       opacity: 0;
       transform-origin: top right;
-      transform: rotate(-15deg);
+      transform: translateY(-90%) rotate(-15deg);
       animation: fade-in 1.2s 1s ease-in-out forwards;
     }
   }
@@ -33,13 +33,12 @@
     min-width: 320px;
     font-weight: 200;
     justify-self: center;
-    position: relative;
       .play-drums {
         display: inline-block;
         font-size: 1.5rem;
         line-height: 1.1;
         transform-origin: top left;
-        transform: rotate(5deg);
+        transform: rotate(5deg) translateY(40%);
         opacity: 0;
         animation: fade-in 1.2s 2.5s ease-in-out forwards;
       }
@@ -50,7 +49,7 @@
       }
       .make-apps {
         position: absolute;
-        bottom: 10px;
+        bottom: 30px;
         width: 100%;
         text-align: center;
         font-size: 1.6rem;
@@ -66,26 +65,26 @@
         }
       }
       .drummer {
-      float: left;
-      padding-left: 13px;
-      -webkit-clip-path: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-      clip-path: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-      shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-      -webkit-shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-      shape-margin: 10px;
-      transition: filter .5s;
-      opacity: 0;
-      animation: slide-in 1s 2s ease-out forwards;
-      &:hover {
-        cursor: pointer;
-        filter: brightness(.7) sepia(60%);
-      }
-      &:focus {
-        filter: brightness(.7) sepia(60%);
-        outline: none;
+        float: left;
+        padding-left: 13px;
+        -webkit-clip-path: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        clip-path: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        -webkit-shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        shape-margin: 10px;
+        transition: filter .5s;
+        opacity: 0;
+        animation: slide-in 1s 2s ease-out forwards;
+        &:hover {
+          cursor: pointer;
+          filter: brightness(.7) sepia(60%);
+        }
+        &:focus {
+          filter: brightness(.7) sepia(60%);
+          outline: none;
+        }
       }
     }
-  }
 
   .disclaimer {
     font-size: 0.9rem;
@@ -94,6 +93,55 @@
   }
 }
 
+@media (orientation: landscape) {
+  body {
+    background: #fff;
+  }
+
+  .AboutPage {
+    grid-template-rows: 80px 1fr 90px;
+    .main-header {
+      justify-content: space-around;
+      width: 60%;
+      .hi {
+        font-size: 2.2rem;
+      }
+      .bohdan {
+        font-size: 1.6rem;
+        transform: rotate(-5deg);
+      }
+    }
+
+    .main-display {
+        .play-drums {
+          font-size: 1.3rem;
+        }
+        .click-me {
+          font-size: .9rem;
+        }
+        .make-apps {
+          bottom: 80px;
+          padding-right: 20px;
+          text-align: right;
+          font-size: 1.4rem;
+        }
+        .drummer {
+          height: 170px;
+          float: left;
+          padding-top: 13px;
+          -webkit-clip-path: none;
+          clip-path: none;
+          shape-outside: none;
+          -webkit-shape-outside: none;
+          shape-margin: 0;
+        }
+      }
+
+    .disclaimer {
+      font-size: 0.8rem;
+    }
+  }
+}
 // @media (orientation: landscape) and (max-width: 812px) {
 //   .AboutPage {
 //     grid-template-rows: minmax(70px, 90px) minmax(200px, 1fr) 20px;

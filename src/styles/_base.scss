@@ -28,20 +28,11 @@ body {
   z-index: 1;
 }
 
-// @media (orientation: landscape) and (max-width: 812px) {
-//   html {
-//     font-size: 14px;
-//   }
-//   body {
-//     background: #fff;
-//   }
-// }
-
 canvas {
-  left: 0;
   position: absolute;
-  height: 30%;
+  left: 0;
   top: 0;
+  height: 30%;
   width: 100%;
   z-index: -1;
 }
@@ -52,7 +43,6 @@ button {
 }
 
 .icon {
-  background-color: rgba(111, 111, 143, 0.01);
   border-radius: .5em;
   box-shadow: var(--shadow);
   height: 2.2rem;

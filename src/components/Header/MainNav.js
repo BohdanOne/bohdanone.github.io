@@ -26,7 +26,7 @@ const MainNav = props => {
 }
 
 const mapStateToProps = state => {
-  return { sound: state.sound.isOn};
+  return { sound: state.sound.isOn };
 }
 
 export default connect(mapStateToProps)(MainNav);

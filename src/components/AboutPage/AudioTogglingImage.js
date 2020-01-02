@@ -33,18 +33,16 @@ const AudioTogglingImage = props => {
   };
 
   return (
-    <>
-      <img
-        className={ props.imgClass }
-        src={ props.imgSrc[0] }
-        srcSet={ `${props.imgSrc[0]}, ${props.imgSrc[1]} 2x, ${props.imgSrc[2]} 3x` }
-        alt={ props.imgAlt }
-        onClick={ () => onImageInteraction(props.sound) }
-        onKeyPress={ () => onImageInteraction(props.sound) }
-        tabIndex="0"
-        role="button"
-      />
-    </>
+    <img
+      className={ props.imgClass }
+      src={ props.imgSrc[0] }
+      srcSet={ `${props.imgSrc[0]}, ${props.imgSrc[1]} 2x, ${props.imgSrc[2]} 3x` }
+      alt={ props.imgAlt }
+      onClick={ () => onImageInteraction(props.sound) }
+      onKeyPress={ () => onImageInteraction(props.sound) }
+      tabIndex="0"
+      role="button"
+    />
   );
 }
 
