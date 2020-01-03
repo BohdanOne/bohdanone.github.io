@@ -36,7 +36,7 @@ const AudioTogglingImage = props => {
     <img
       className={ props.imgClass }
       src={ props.imgSrc[0] }
-      srcSet={ `${props.imgSrc[0]}, ${props.imgSrc[1]} 2x, ${props.imgSrc[2]} 3x` }
+      srcSet={ `${props.imgSrc[2]} 3x, ${props.imgSrc[1]} 2x, ${props.imgSrc[0]} 1x` }
       alt={ props.imgAlt }
       onClick={ () => onImageInteraction(props.sound) }
       onKeyPress={ () => onImageInteraction(props.sound) }
