@@ -67,11 +67,11 @@
       .drummer {
         float: left;
         padding-left: 13px;
-        -webkit-clip-path: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-        clip-path: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-        shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-        -webkit-shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-        shape-margin: 10px;
+        // -webkit-clip-path: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        // clip-path: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        // shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        // -webkit-shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
+        // shape-margin: 10px;
         transition: filter .5s;
         opacity: 0;
         animation: slide-in 1s 2s ease-out forwards;
@@ -113,62 +113,72 @@
     }
 
     .main-display {
-        .play-drums {
-          font-size: 1.3rem;
-        }
-        .click-me {
-          font-size: .9rem;
-        }
-        .make-apps {
-          bottom: 80px;
-          padding-right: 20px;
-          text-align: right;
-          font-size: 1.4rem;
-        }
-        .drummer {
-          height: 170px;
-          float: left;
-          padding-top: 13px;
-          -webkit-clip-path: none;
-          clip-path: none;
-          shape-outside: none;
-          -webkit-shape-outside: none;
-          shape-margin: 0;
-        }
+      .play-drums {
+        font-size: 1.3rem;
       }
-
+      .click-me {
+        font-size: .9rem;
+      }
+      .make-apps {
+        bottom: 80px;
+        padding-right: 20px;
+        text-align: right;
+        font-size: 1.4rem;
+      }
+      .drummer {
+        height: 170px;
+        float: left;
+        padding-top: 13px;
+        -webkit-clip-path: none;
+        clip-path: none;
+        shape-outside: none;
+        -webkit-shape-outside: none;
+        shape-margin: 0;
+      }
+    }
     .disclaimer {
       font-size: 0.8rem;
     }
   }
 }
-// @media (orientation: landscape) and (max-width: 812px) {
-//   .AboutPage {
-//     grid-template-rows: minmax(70px, 90px) minmax(200px, 1fr) 20px;
-//     overflow: hidden;
-//     .main-header{
-//       .bohdan {
-//         align-self: auto;
-//         margin-left: 30px;
-//       }
-//     }
-//     .main-display {
-//       width: 90%;
-//       .make-apps {
-//         padding-top: 40px;
-//         position: initial;
-//       }
-//       .drummer {
-//         height: 200px;
-//         -webkit-clip-path: none;
-//         clip-path: none;
-//         shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-//         -webkit-shape-outside: polygon(14px 142px, 16px 67px, 39px 39px, 63px 33px, 74px 0px, 121px 0px, 144px 56px, 101px 83px, 108px 144px, 162px 133px, 172px 164px, 195px 216px, 193px 247px, 34px 234px);
-//       }
-//     }
-//     .disclaimer {
-//       text-align: right;
-//       padding-right: .6rem;
-//     }
-//   }
-// }
+
+@media (min-width: 768px) {
+  .AboutPage {
+    grid-template-rows: minmax(100px, 200px) minmax(300px, 1fr) 50px;
+    .main-header {
+      .bohdan {
+        font-size: 2rem;
+      }
+    }
+    .main-display {
+        .play-drums {
+          font-size: 2rem;
+          transform: rotate(5deg);
+        }
+        .click-me {
+          font-size: 1.2rem;
+        }
+        .make-apps {
+          bottom: 80px;
+          font-size: 2rem;
+        }
+        .drummer {
+          height: 500px;
+        }
+      }
+
+    .disclaimer {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px){
+  .AboutPage {
+    .main-display {
+      .drummer {
+        height: 400px;
+      }
+    }
+  }
+}
