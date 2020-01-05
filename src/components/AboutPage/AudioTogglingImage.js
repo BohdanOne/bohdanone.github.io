@@ -33,17 +33,19 @@ const AudioTogglingImage = props => {
   };
 
   return (
-    <img
-      className={ props.imgClass }
-      src={ props.imgSrc[0] }
-      srcSet={ `${props.imgSrc[0]} 246w, ${props.imgSrc[1]} 492w, ${props.imgSrc[2]} 738w` }
-      sizes="(max-width: 568px) 246px, 492px"
-      alt={ props.imgAlt }
-      onClick={ () => onImageInteraction(props.sound) }
-      onKeyPress={ () => onImageInteraction(props.sound) }
-      tabIndex="0"
-      role="button"
-    />
+    <div className="img-wrapper">
+      <img
+        className={ props.imgClass }
+        src={ props.imgSrc[0] }
+        srcSet={ `${props.imgSrc[0]} 246w, ${props.imgSrc[1]} 492w, ${props.imgSrc[2]} 738w` }
+        sizes="(max-width: 568px) 246px, 492px"
+        alt={ props.imgAlt }
+        onClick={ () => onImageInteraction(props.sound) }
+        onKeyPress={ () => onImageInteraction(props.sound) }
+        tabIndex="0"
+        role="button"
+      />
+    </div>
   );
 }
 

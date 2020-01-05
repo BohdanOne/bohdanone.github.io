@@ -43,7 +43,7 @@ canvas {
   position: absolute;
   left: 0;
   top: 0;
-  height: 30%;
+  height: 2rem;
   width: 100%;
   z-index: -1;
 }
@@ -51,4 +51,9 @@ canvas {
 button {
   background: none;
   border: none;
+}
+
+.disclaimer {
+  font-size: 0.15rem;
+  grid-area: -2 / 1 / span 1 / span 3;
 }

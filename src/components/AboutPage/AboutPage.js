@@ -12,9 +12,17 @@ export default () => {
 
         <p className="hi">Hi!</p>
         <p className="bohdan">I'm Bohdan</p>
-        <div className="img-wrapper">
+
+        {/* <div className="img-wrapper">
           <img src={drummer} alt=""/>
-        </div>
+        </div> */}
+
+        <AudioTogglingImage
+          imgClass="drummer"
+          imgSrc={ [drummer, drummer2x, drummer3x] }
+          imgAlt="Bohdan Imiela play drums"
+        />
+
         <p className="play-drums">I play drums...</p>
         <p className="click-to-listen">
           <span role="img" aria-label="Backhand Index Pointing Left">👈 </span>
@@ -45,9 +53,9 @@ export default () => {
           <p className="make-apps"><a href="https://github.com/BohdanOne">...and I make apps!</a></p>
         </div> */}
 
-        {/* <footer className="disclaimer">
+        <footer className="disclaimer">
           Site under developement. Come back soon!
-        </footer> */}
+        </footer>
       </section>
 
   );

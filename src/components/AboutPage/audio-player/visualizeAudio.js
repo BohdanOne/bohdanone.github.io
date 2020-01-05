@@ -19,7 +19,7 @@ export default analyser => {
       requestAnimationFrame(draw);
       analyser.getByteTimeDomainData(dataArray);
 
-      canvasContext.fillStyle = 'rgba(255,255,255,.2)';
+      canvasContext.fillStyle = 'rgba(255,255,255,0.1)';
       canvasContext.fillRect(0, 0, WIDTH, HEIGHT);
       canvasContext.lineWidth = 1;
       canvasContext.strokeStyle = '#ffa600';
