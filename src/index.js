@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 import './styles/index.scss';
 import App from './components/App';
-import windowHeightTracker from './start-up/windowHeightTracker';
+import windowSizeTracker from './start-up/windowSizeTracker';
 import toggleOutlines from './start-up/toggleOutlines';
 
 ///// redux dev tools
@@ -19,7 +19,7 @@ const store = createStore(reducers, composeEnhancers());
 
 const root = document.getElementById('root');
 
-windowHeightTracker(root);
+windowSizeTracker();
 toggleOutlines();
 
 ReactDOM.render(

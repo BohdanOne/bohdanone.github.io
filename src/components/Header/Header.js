@@ -6,7 +6,7 @@ import Hamburger from './Hamburger';
 export default () => {
   return (
     <header className="Header">
-      <MainNav />
+      {/* <MainNav /> */}
       <Hamburger />
       <SoundToggler />
     </header>
