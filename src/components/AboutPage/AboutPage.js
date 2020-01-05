@@ -29,6 +29,8 @@ export default () => {
           click to listen
           <span role="img" aria-label="Drum"> 🥁</span>
         </p>
+        <p className="gh-link"><a href="https://github.com/BohdanOne">...and I build apps.</a></p>
+
 
         {/* <h1 className="main-header">
           <span className="hi">Hi!</span>
