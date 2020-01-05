@@ -1,27 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.5303d6c1.chunk.css",
-    "main.js": "/static/js/main.c611ac71.chunk.js",
-    "main.js.map": "/static/js/main.c611ac71.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b04fd9d3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b04fd9d3.js.map",
-    "static/js/2.db0320df.chunk.js": "/static/js/2.db0320df.chunk.js",
-    "static/js/2.db0320df.chunk.js.map": "/static/js/2.db0320df.chunk.js.map",
+    "main.css": "/static/css/main.36b71249.chunk.css",
+    "main.js": "/static/js/main.55aac6db.chunk.js",
+    "main.js.map": "/static/js/main.55aac6db.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.17bba21f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.17bba21f.js.map",
+    "static/js/2.dee88eaa.chunk.js": "/static/js/2.dee88eaa.chunk.js",
+    "static/js/2.dee88eaa.chunk.js.map": "/static/js/2.dee88eaa.chunk.js.map",
+    "static/js/3.9037c424.chunk.js": "/static/js/3.9037c424.chunk.js",
+    "static/js/3.9037c424.chunk.js.map": "/static/js/3.9037c424.chunk.js.map",
+    "static/js/4.b1c035ff.chunk.js": "/static/js/4.b1c035ff.chunk.js",
+    "static/js/4.b1c035ff.chunk.js.map": "/static/js/4.b1c035ff.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8ec8b3b3e4874f96f39fed4648b8d40a.js": "/precache-manifest.8ec8b3b3e4874f96f39fed4648b8d40a.js",
+    "precache-manifest.74edb2305cec63b8567ccebd50ea7f1d.js": "/precache-manifest.74edb2305cec63b8567ccebd50ea7f1d.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.5303d6c1.chunk.css.map": "/static/css/main.5303d6c1.chunk.css.map",
-    "static/js/2.db0320df.chunk.js.LICENSE": "/static/js/2.db0320df.chunk.js.LICENSE",
+    "static/css/main.36b71249.chunk.css.map": "/static/css/main.36b71249.chunk.css.map",
+    "static/js/2.dee88eaa.chunk.js.LICENSE": "/static/js/2.dee88eaa.chunk.js.LICENSE",
     "static/media/Zouk.mp3": "/static/media/Zouk.dfa4e760.mp3",
     "static/media/drummer.png": "/static/media/drummer.dec7c367.png",
     "static/media/drummer@2x.png": "/static/media/drummer@2x.39408019.png",
     "static/media/drummer@3x.png": "/static/media/drummer@3x.6ce68fff.png",
+    "static/media/fx.mp3": "/static/media/fx.29bae129.mp3",
     "static/media/index.scss": "/static/media/reem-kufi-latin-400.98377891.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.b04fd9d3.js",
-    "static/js/2.db0320df.chunk.js",
-    "static/css/main.5303d6c1.chunk.css",
-    "static/js/main.c611ac71.chunk.js"
+    "static/js/runtime-main.17bba21f.js",
+    "static/js/2.dee88eaa.chunk.js",
+    "static/css/main.36b71249.chunk.css",
+    "static/js/main.55aac6db.chunk.js"
   ]
 }
