@@ -11,14 +11,9 @@ const AudioTogglingImage = props => {
 
   useEffect(() => {
     if (props.sound) {
-      if (!audio) {
-        const [audio, ctx] = audioPlayer(audioSource);
-        setAudio(audio);
-        setCtx(ctx);
-      }
       if (isPlaying) {
-        ctx.resume();
-        audio.play();
+        ctx && ctx.resume();
+        audio && audio.play();
       } else {
         audio && audio.pause();
       }
@@ -28,9 +23,19 @@ const AudioTogglingImage = props => {
     return () => audio && audio.pause();
   }, [props.sound, isPlaying, audio, ctx]);
 
+
+
   const onImageInteraction = sound => {
-    !sound ? noSoundNotification() : setIsPlaying(!isPlaying);
-  };
+    if (!sound) {
+      noSoundNotification()
+    } else {
+      if (!audio) {
+        const [audio, ctx] = audioPlayer(audioSource);
+        setAudio(audio);
+        setCtx(ctx);
+      }
+    } setIsPlaying(!isPlaying);
+  }
 
   return (
     <div className="img-wrapper">
