@@ -36,6 +36,7 @@
   }
   .MainNav {
     display: flex;
+    justify-content: flex-end;
     .nav-button {
       @extend .icon;
       display: flex;
@@ -45,6 +46,7 @@
       font-size: 0.3rem;
       line-height: 1;
       padding: 0 .15rem;
+      margin: 0 5px;
       width: min-content;
       transition: color .2s ease-in-out;
       &:hover {
