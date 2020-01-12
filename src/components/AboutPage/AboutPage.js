@@ -17,8 +17,8 @@ export default () => {
       <section className="AboutPage">
         <canvas id="canvas"></canvas>
 
-        <p className="hi">Hi!</p>
-        <p className="bohdan">My name is Bohdan</p>
+        <h2 className="hi">Hi!</h2>
+        <h3 className="bohdan">My name is Bohdan</h3>
 
         <AudioTogglingImage
           imgClass="drummer"
@@ -38,6 +38,5 @@ export default () => {
           Site under developement. Come back soon!
         </footer>
       </section>
-
   );
 };

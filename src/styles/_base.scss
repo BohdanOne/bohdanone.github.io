@@ -57,3 +57,11 @@ button {
   font-size: 0.15rem;
   grid-area: -2 / 1 / span 1 / span 3;
 }
+
+svg {
+  fill: var(--primary-col);
+    transition: fill .2s ease-in-out;
+    &:hover {
+      fill: var(--hover-col);
+    }
+}

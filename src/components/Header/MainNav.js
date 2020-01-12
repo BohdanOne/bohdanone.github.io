@@ -8,7 +8,7 @@ const MainNav = props => {
 
   const handleClick = e => {
     if (e.target.innerText !== activeButton) {
-      props.toggleBurger();
+      if (props.open) props.toggleBurger();
       if (props.sound) {
         const audio = new Audio(audioSource);
         audio.play();

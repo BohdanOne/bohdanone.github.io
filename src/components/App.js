@@ -4,6 +4,7 @@ import { useSpring, useTransition, animated } from 'react-spring';
 import Header from './Header/Header';
 const AboutPage = lazy(() => import('./AboutPage/AboutPage'));
 const SkillsPage = lazy(() => import('./SkillsPage/SkillsPage'));
+const ContactPage = lazy(() => import('./ContactPage/ContactPage'));
 
 export default () => {
   const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
@@ -25,6 +26,7 @@ export default () => {
               <Switch location={ item }>
                 <Route exact path="/" component={ AboutPage }/>
                 <Route exact path="/skills" component={ SkillsPage }/>
+                <Route exact path="/contact" component={ ContactPage }/>
               </Switch>
             </animated.main>
           ))}

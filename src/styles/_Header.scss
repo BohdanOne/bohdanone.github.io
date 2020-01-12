@@ -36,11 +36,6 @@
     svg {
       width: .5rem;
       height: .5rem;
-      fill: var(--primary-col);
-      transition: fill .2s ease-in-out;
-      &:hover {
-        fill: var(--hover-col);
-      }
     }
   }
   .MainNav {
