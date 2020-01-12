@@ -1,0 +1,2 @@
+(this["webpackJsonpportfolio-frontend"]=this["webpackJsonpportfolio-frontend"]||[]).push([[5],{44:function(e,t,o){"use strict";o.r(t);var n=o(0),a=o.n(n);t.default=function(){return a.a.createElement("section",{className:"SkillsPage"},a.a.createElement("footer",{className:"disclaimer"},"Site under developement. Come back soon!"))}}}]);
+//# sourceMappingURL=5.fcc70d7a.chunk.js.map
