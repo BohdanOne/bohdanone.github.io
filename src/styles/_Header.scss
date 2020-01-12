@@ -7,13 +7,21 @@
   justify-content: flex-end;
   align-items: center;
   padding: .15rem;
+  z-index: 10;
+  &.open {
+    padding: .5rem;
+    background: rgba(111, 111, 143, 0.7);
+    width: calc(var(--grid-width) * 5);
+    height: calc(var(--grid-height) * 9);
+    justify-content: space-between;
+    align-items: flex-start;
+  }
   button {
     appearance: none;
     -webkit-appearance: none;
-    background: none;
+    background: #fff;
     border: none;
     padding: .15rem;
-    z-index: 10;
   }
   .icon {
     margin: 0 5px;
@@ -21,8 +29,7 @@
     border-radius: 5px;
     box-shadow: var(--shadow);
     cursor: pointer;
-    background: transparent;
-    z-index: 10;
+    background: #fff;
     &[aria-checked="true"] {
       box-shadow: var(--inset-shadow);
     }
@@ -39,6 +46,16 @@
   .MainNav {
     display: flex;
     justify-content: flex-end;
+    &.open {
+      height: calc(var(--grid-height) * 4);
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      .nav-button {
+        margin-bottom: 10px;
+        width: 2rem;
+      }
+    }
     .nav-button {
       @extend .icon;
       width: .5rem;
@@ -66,6 +83,9 @@
   .Header {
     .MainNav {
       display: none;
+      }
+    .MainNav.open {
+      display: flex;
     }
   }
 }

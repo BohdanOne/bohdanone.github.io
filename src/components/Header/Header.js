@@ -8,8 +8,8 @@ const Header = () => {
   const toggleBurger = () => setIsOpen(!isOpen);
 
   return (
-    <header className="Header">
-      <MainNav />
+    <header className={ isOpen ? "Header open" : "Header" }>
+      <MainNav open={ isOpen } toggleBurger={ toggleBurger } />
       <Hamburger open={ isOpen } toggleBurger={ toggleBurger }/>
       <SoundToggler />
     </header>

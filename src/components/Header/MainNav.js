@@ -8,6 +8,7 @@ const MainNav = props => {
 
   const handleClick = e => {
     if (e.target.innerText !== activeButton) {
+      props.toggleBurger();
       if (props.sound) {
         const audio = new Audio(audioSource);
         audio.play();
@@ -16,7 +17,7 @@ const MainNav = props => {
     setActiveButton(e.target.innerText)
   }
   return (
-    <nav className="MainNav">
+    <nav className={ props.open ? "MainNav open": "MainNav" }>
       <NavButton route="/" text="about" active={ activeButton } onClick={ handleClick }/>
       <NavButton route="/skills" text="skills" active={ activeButton } onClick={ handleClick }/>
       <NavButton route="/projects" text="projects" active={ activeButton } onClick={ handleClick }/>
