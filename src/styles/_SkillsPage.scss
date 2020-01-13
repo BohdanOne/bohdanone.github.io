@@ -1,13 +1,23 @@
 .SkillsPage {
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: minmax(100px, 300px) minmax(300px, 1fr) 50px;
-  font-size: 0.5rem;
-  padding-top: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, var(--grid-width));
+  grid-auto-rows: minmax(var(--grid-height), auto);
+  justify-items: center;
+  align-items: center;
+  .skills-header {
+    font-size: 0.5rem;
+    font-weight: 300;
+    grid-area: 2 / 1 / 3 / span 5;
+  }
+  .skills {
+    font-size: 0.25rem;
+    grid-column: 1 / span 5;
+    grid-row-start: 3;
+    margin: 0 .5rem .5rem;
+    p {
+      margin-bottom: .25rem;
+      text-align: justify;
+      text-align-last: left;
+    }
+  }
 }
