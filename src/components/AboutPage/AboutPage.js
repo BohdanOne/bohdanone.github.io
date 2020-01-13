@@ -33,10 +33,6 @@ export default () => {
           <span role="img" aria-label="Drum"> 🥁</span>
         </animated.p>
         <p className="gh-link"><a href="https://github.com/BohdanOne">...and I build apps.</a></p>
-
-        <footer className="disclaimer">
-          Site under developement. Come back soon!
-        </footer>
       </section>
   );
 };
