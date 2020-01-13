@@ -16,7 +16,7 @@ export default () => {
           Frontend logic of my apps is based on modern JavaScript (ES6 and beyond). Beside writing in Vanilla JS I keep exploring possibilities of React (also expanded with Redux). Recently I’m also getting acquainted with Svelte.js.
         </p>
         <p>
-          Backend of my apps is written in Node.js with Express framework. My database of choice is MongoDB. During development process I’m using tools such as Webpack and Babel.  Of course all my projects are build with Git, remote repositiories are stored at GitHub.
+          Backend of my apps is written in Node.js with Express framework. My database of choice is MongoDB. During development process I’m using tools such as Webpack and Babel. Of course all my projects are build with Git, remote repositiories are stored at GitHub.
         </p>
         <p>
           I speak Polish, English and also a bit of Portuguese.<br/>
