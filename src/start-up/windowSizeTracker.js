@@ -1,11 +1,14 @@
 export default () => {
   let root = document.documentElement;
+  const setSize = (w, h) => {
+    let width = w < 1000 ? w : 1000;
+    root.style.setProperty('--grid-width', `${width/5}px`);
+    root.style.setProperty('--grid-height', `${h/9}px`);
+  }
   document.addEventListener('DOMContentLoaded', () => {
-    root.style.setProperty('--grid-width', `${window.innerWidth/5}px`);
-    root.style.setProperty('--grid-height', `${window.innerHeight/9}px`);
+    setSize(window.innerWidth, window.innerHeight);
     window.onresize = () => {
-      root.style.setProperty('--grid-width', `${window.innerWidth/5}px`);
-      root.style.setProperty('--grid-height', `${window.innerHeight/9}px`);
+      setSize(window.innerWidth, window.innerHeight);
     }
   });
 }
