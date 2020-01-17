@@ -48,8 +48,12 @@ canvas {
 }
 
 button {
+  appearance: none;
+  -webkit-appearance: none;
   background: none;
   border: none;
+  background: #fff;
+  padding: .15rem;
 }
 
 svg {
@@ -58,4 +62,11 @@ svg {
     &:hover {
       fill: var(--hover-col);
     }
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(5, var(--grid-width));
+  justify-items: center;
+  align-items: center;
 }

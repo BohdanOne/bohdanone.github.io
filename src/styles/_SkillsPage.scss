@@ -1,9 +1,5 @@
 .SkillsPage {
-  display: grid;
-  grid-template-columns: repeat(5, var(--grid-width));
   grid-auto-rows: minmax(var(--grid-height), auto);
-  justify-items: center;
-  align-items: center;
   .skills-header {
     font-size: 0.5rem;
     font-weight: 300;

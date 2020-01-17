@@ -1,9 +1,5 @@
 .ProjectsPage {
-  display: grid;
-  grid-template-columns: repeat(5, var(--grid-width));
   grid-auto-rows: minmax(var(--grid-height), auto);
-  justify-items: center;
-  align-items: center;
   .projects-heading {
     font-size: .5rem;
     font-weight: 300;

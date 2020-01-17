@@ -1,9 +1,5 @@
 .ContactPage {
-  display: grid;
-  grid-template-columns: repeat(5, var(--grid-width));
   grid-template-rows: repeat(9, var(--grid-height));
-  justify-items: center;
-  align-items: center;
   .contact-header {
     font-size: .5rem;
     font-weight: 300;
