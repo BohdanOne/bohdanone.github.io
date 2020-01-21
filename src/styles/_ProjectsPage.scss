@@ -1,6 +1,6 @@
 .ProjectsPage {
   grid-auto-rows: minmax(var(--grid-height), auto);
-  .projects-heading {
+  .ProjectsPage__heading {
     font-size: .5rem;
     font-weight: 300;
     grid-area: 2 / 1 / 3 / span 5;
@@ -10,5 +10,26 @@
     grid-column: 2/ span 3;
     grid-row-start: 3;
     text-align: center;
+  }
+  .ProjectsPage__container {
+    grid-column: 2 / span 3;
+    grid-row-start: 3;
+    .project {
+      .project__title {
+        font-size: .5rem;
+      }
+      .project__description {
+        font-size: 0.25rem;
+        span {
+          font-style: italic;
+        }
+      }
+      .project__links {
+        .project__link {
+          font-size: 0.25rem;
+          margin: 0 5px;
+        }
+      }
+    }
   }
 }
