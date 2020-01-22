@@ -38,13 +38,13 @@ body {
   height: 100%;
 }
 
-canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 2rem;
-  width: 100%;
-  z-index: -1;
+a {
+  color: var(--ternary-col);
+  transition: color .2s ease-in-out;
+  &:hover {
+    color: var(--hover-col);
+  cursor: pointer;
+  }
 }
 
 button {
@@ -54,6 +54,15 @@ button {
   border: none;
   background: #fff;
   padding: .15rem;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2rem;
+  width: 100%;
+  z-index: -1;
 }
 
 svg {
