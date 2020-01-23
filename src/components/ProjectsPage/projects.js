@@ -13,11 +13,22 @@ import simple808L from '../../assets/images/simple808-800.png';
 import weatherS from '../../assets/images/weather-200.png';
 import weatherM from '../../assets/images/weather-400.png';
 import weatherL from '../../assets/images/weather-800.png';
+import portfolioS from '../../assets/images/portfolio-200.png';
+import portfolioM from '../../assets/images/portfolio-400.png';
+import portfolioL from '../../assets/images/portfolio-800.png';
 
 const projects = [
   {
+    name: 'My Portfolio Page',
+    description: 'My personal developer portfolio page. In the project I try to explore and learn modern features of React (e.g Hooks) and Redux. I also make use of react-related libraries: react-router, react-spring. App includes my first experiments with Web Audio API. Page still under development - more features on the way!',
+    imgs: [ portfolioS, portfolioM, portfolioL ],
+    technologies: ['React', 'Redux', 'SCSS', 'JavaScript', 'CSS3', 'HTML5'],
+    demoUrl: 'https://https://bohdanone.github.io/',
+    codeUrl: 'https://github.com/BohdanOne/bohdanone.github.io'
+  },
+  {
     name: 'Vinyl Store',
-    description: 'Application for all music lovers. Guest user can browse collection of record stores (each entry has info, rating, location on google maps, opening hours and reviews). Registered user can edit or remove own profile; see other users profiles; add, edit and delete stores; add, edit and delete reviews. Demo hosted on Heroku - might take few seconds to load!',
+    description: 'Application for all music lovers. Guest user can browse collection of record stores (each entry has info, rating, location on google maps, opening hours and reviews). Registered user can edit or remove own profile; see other users profiles; add, edit and delete stores; add, edit and delete reviews. When building this app, my goal was to make full-stack app with implementation of REST API. Demo hosted on Heroku - might take few seconds to load!',
     imgs: [ vinylS, vinylM, vinylL ],
     technologies: ['MongoDB', 'Express.js', 'Node.js', 'EJS', 'Bootstrap', 'JavaScript', 'CSS3', 'HTML5'],
     demoUrl: 'https://vinyl-store.herokuapp.com/',
@@ -40,20 +51,20 @@ const projects = [
     codeUrl: 'https://github.com/BohdanOne/tempomat'
   },
   {
-    name: 'Simple 808',
-    description: 'Drum machine with loaded sound of legendary TR-808. You can play using keyboard or pressing pads on the screen',
-    imgs: [ simple808S, simple808M, simple808L ],
-    technologies: ['JavaScript', 'CSS3', 'HTML5'],
-    demoUrl: 'https://bohdanone.github.io/simple808',
-    codeUrl: 'https://github.com/BohdanOne/simple808'
-  },
-  {
     name: "What's the Weather",
-    description: 'User can check actual weather condition or forecasts fetched from AccuWeather API. If user allow geolocation then app will determine his location using browsers Geolocation API. If geolocation is not allowed (or user wants to check weather for other place) there is also text search option.',
+    description: 'User can check actual weather condition or forecasts fetched from AccuWeather API. If user allow geolocation then app will determine his location using browsers Geolocation API. If geolocation is not allowed (or user wants to check weather for other place) there is also text search option. Ap built to practice connecting to external API and inserting fetched data in the DOM with Vanilla JS. It was also my first experiment with Geolocation API.',
     imgs: [ weatherS, weatherM, weatherL ],
     technologies: ['JavaScript', 'CSS3', 'HTML5', 'SCSS', 'Webpack'],
     demoUrl: 'https://bohdanone.github.io/whatstheweather',
     codeUrl: 'https://github.com/BohdanOne/whatstheweather'
+  },
+  {
+    name: 'Simple 808',
+    description: 'Drum machine with loaded sound of legendary TR-808. You can play using keyboard or pressing pads on the screen. Built for fun to practice interactions with DOM elements in Vanilla Java Script.',
+    imgs: [ simple808S, simple808M, simple808L ],
+    technologies: ['JavaScript', 'CSS3', 'HTML5'],
+    demoUrl: 'https://bohdanone.github.io/simple808',
+    codeUrl: 'https://github.com/BohdanOne/simple808'
   }
 ];
 
