@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import NavButton from './NavButton';
-import audioSource from '../../assets/sounds/fx.mp3';
+// import audioSource from '../../assets/sounds/fx.mp3';
 
 const MainNav = props => {
   const [activeButton, setActiveButton] = useState('about');
@@ -9,10 +9,10 @@ const MainNav = props => {
   const handleClick = e => {
     if (e.target.innerText !== activeButton) {
       if (props.open) props.toggleBurger();
-      if (props.sound) {
-        const audio = new Audio(audioSource);
-        audio.play();
-      }
+      // if (props.sound) {
+      //   const audio = new Audio(audioSource);
+      //   audio.play();
+      // }
     }
     setActiveButton(e.target.innerText)
   }

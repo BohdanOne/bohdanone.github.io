@@ -21,29 +21,79 @@
     }
   }
   .ProjectsPage__container {
-    grid-column: 2 / -2 ;
+    grid-column: 1 / -1 ;
     grid-row-start: 4;
+    display: grid;
+    grid-gap: 10px;
     .project {
+      border-radius: 5px;
+      box-shadow: var(--shadow);
+      padding: .25rem;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-areas:
+        'title title links'
+        'img img img'
+        'description description description'
+        'tech tech nav';
+      grid-gap: 5px;
+      align-items: start;
       .project__title {
         font-size: .5rem;
         text-align: center;
+        grid-area: title;
+        justify-self: start;
+        margin: 0;
+      }
+      .project__img {
+        grid-area: img;
+        width: 100%;
+        height: auto;
       }
       .project__description {
         font-size: 0.25rem;
+        grid-area: description;
       }
       .project__technologies {
         font-size: 0.2rem;
+        grid-area: tech;
         span {
           font-style: italic;
           font-weight: 600;
         }
       }
       .project__links {
-        margin: 0 auto;
-        width: fit-content;
+        justify-self: end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        grid-area: links;
         .project__link {
-          font-size: 0.25rem;
+          font-size: 0.2rem;
           margin: 0 5px;
+        }
+      }
+      .project__nav {
+        grid-area: nav;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        .nav__button--back-to-top {
+          border-radius: 5px;
+          box-shadow: var(--shadow);
+          cursor: pointer;
+          background: #fff;
+          font-family: inherit;
+          color: var(--primary-col);
+          padding: 0 .15rem;
+          width: min-content;
+          transition: color .2s ease-in-out;
+          &:hover {
+            color: var(--hover-col);
+          }
+          &:active {
+            box-shadow: var(--inset-shadow);
+          }
         }
       }
     }

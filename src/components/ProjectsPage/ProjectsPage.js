@@ -52,6 +52,7 @@ export default () => {
             { projects[index].name }
           </h3>
           <img
+            className="project__img"
             src={projects[index].imgs[0]}
             srcSet={`${projects[index].imgs[0]} 200w, ${projects[index].imgs[1]} 400w, ${projects[index].imgs[2]} 800w`}
             sizes="(max-width: 450px) 200px, (max-width: 800px) 400px, 800px"
@@ -67,7 +68,12 @@ export default () => {
             <a className="project__link" href={ projects[index].demoUrl}>DEMO</a>
             <a className="project__link" href={ projects[index].codeUrl}>CODE</a>
           </div>
-          <hr/>
+          <nav className="project__nav">
+            <button
+              className="nav__button--back-to-top"
+              onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
+            >BACK TO TOP</button>
+          </nav>
         </animated.div>
       ))}
     </div>
