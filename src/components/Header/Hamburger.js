@@ -23,6 +23,7 @@ export default props => {
           onClick={ props.toggleBurger }
           role="switch" aria-checked="false"
           className="icon hamburger"
+          aria-label="Navigation Toggle"
         >
           <svg
             viewBox="0 0 32 32"

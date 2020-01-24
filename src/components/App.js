@@ -21,6 +21,7 @@ export default () => {
     <animated.div className="App" style={ fade }>
 {/* TODO loader component */}
       <Suspense fallback={<div>Loading ...</div>}>
+{/* ===================== */}
         <Header />
           {transitions.map(({ item, props, key }) => (
             <animated.main key={ key } style={ props }>

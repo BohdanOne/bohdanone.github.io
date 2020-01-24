@@ -11,6 +11,7 @@ const SoundToggler = props => {
         <button
           onClick={toggleSound}
           role="switch" aria-checked="true"
+          aria-label="Sound Toggle"
           className="icon sound-toggler"
         >
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -24,6 +25,7 @@ const SoundToggler = props => {
           onClick={toggleSound}
           role="switch" aria-checked="false"
           className="icon sound-toggler"
+          aria-label="Sound Toggle"
         >
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 4.59375L13.2812 6.28125L8.5625 11H4V21H8.5625L13.2812 25.7188L15 27.4062V4.59375ZM13 9.4375V22.5625L9.71875 19.2812L9.40625 19H6V13H9.40625L9.71875 12.7188L13 9.4375ZM20.2188 11.7812L18.7812 13.2188L21.5625 16L18.7812 18.7812L20.2188 20.2188L23 17.4375L25.7812 20.2188L27.2188 18.7812L24.4375 16L27.2188 13.2188L25.7812 11.7812L23 14.5625L20.2188 11.7812Z" />

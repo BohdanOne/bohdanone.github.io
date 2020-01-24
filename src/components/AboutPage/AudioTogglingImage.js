@@ -49,6 +49,7 @@ const AudioTogglingImage = props => {
         onKeyPress={ () => onImageInteraction(props.sound) }
         tabIndex="0"
         role="button"
+        aria-label="Audio Playback Toogle"
       />
     </div>
   );
