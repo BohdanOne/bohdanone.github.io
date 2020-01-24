@@ -17,7 +17,7 @@ const MainNav = props => {
     setActiveButton(e.target.innerText)
   }
   return (
-    <nav className={ props.open ? "MainNav open": "MainNav" }>
+    <nav className={ props.open ? "MainNav open": "MainNav" } aria-expanded={ props.open }>
       <NavButton route="/" text="about" active={ activeButton } onClick={ handleClick }/>
       <NavButton route="/skills" text="skills" active={ activeButton } onClick={ handleClick }/>
       <NavButton route="/projects" text="projects" active={ activeButton } onClick={ handleClick }/>
