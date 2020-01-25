@@ -6,7 +6,6 @@ import Hamburger from './Hamburger';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleBurger = () => setIsOpen(!isOpen);
-
   return (
     <header className={ isOpen ? "Header open" : "Header" }>
       <MainNav open={ isOpen } toggleBurger={ toggleBurger } />

@@ -1,33 +1,31 @@
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import NavButton from './NavButton';
-// import audioSource from '../../assets/sounds/fx.mp3';
+import { useLocation } from 'react-router-dom';
 
-const MainNav = props => {
-  const [activeButton, setActiveButton] = useState('about');
+export default props => {
+  const location = useLocation();
 
-  const handleClick = e => {
-    if (e.target.innerText !== activeButton) {
-      if (props.open) props.toggleBurger();
-      // if (props.sound) {
-      //   const audio = new Audio(audioSource);
-      //   audio.play();
-      // }
+  const determineActiveButton = () => {
+    if (location.pathname === '/') {
+      return 'about';
+    } else {
+      return `${ location.pathname }`.slice(1);
     }
-    setActiveButton(e.target.innerText)
-  }
+  };
+
+  let active = determineActiveButton();
+
+  const handleClick = () => {
+      if (props.open) props.toggleBurger();
+  };
+
   return (
     <nav className={ props.open ? "MainNav open": "MainNav" } aria-expanded={ props.open }>
-      <NavButton route="/" text="about" active={ activeButton } onClick={ handleClick }/>
-      <NavButton route="/skills" text="skills" active={ activeButton } onClick={ handleClick }/>
-      <NavButton route="/projects" text="projects" active={ activeButton } onClick={ handleClick }/>
-      <NavButton route="/contact" text="contact" active={ activeButton } onClick={ handleClick }/>
+      <NavButton route="/" text="about" active={ active } onClick={ handleClick }/>
+      <NavButton route="/skills" text="skills" active={ active } onClick={ handleClick }/>
+      <NavButton route="/projects" text="projects" active={ active } onClick={ handleClick }/>
+      <NavButton route="/contact" text="contact" active={ active } onClick={ handleClick }/>
     </nav>
   );
 }
 
-const mapStateToProps = state => {
-  return { sound: state.sound.isOn };
-}
-
-export default connect(mapStateToProps)(MainNav);

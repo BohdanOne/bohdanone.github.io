@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
+import { Link } from 'react-router-dom';
 import AudioTogglingImage from './AudioTogglingImage';
 
 import drummer from '../../assets/images/drummer.png';
@@ -32,7 +33,10 @@ export default () => {
           click to listen
           <span role="img" aria-label="Drum"> 🥁</span>
         </animated.p>
-        <p className="gh-link"><a href="https://github.com/BohdanOne">...and I build apps.</a></p>
+        <Link
+          to='/projects'
+          className="projects-link"
+        >...and I build apps.</Link>
       </section>
   );
 };

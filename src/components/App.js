@@ -9,7 +9,6 @@ const ContactPage = lazy(() => import('./ContactPage/ContactPage'));
 
 export default () => {
   const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
-
   const location = useLocation();
   const transitions = useTransition(location, location => location.pathname, {
     from: { opacity: 0, transform: 'translateY(100%)' },
@@ -19,20 +18,20 @@ export default () => {
 
   return (
     <animated.div className="App" style={ fade }>
+      <Header />
 {/* TODO loader component */}
       <Suspense fallback={<div>Loading ...</div>}>
 {/* ===================== */}
-        <Header />
-          {transitions.map(({ item, props, key }) => (
-            <animated.main key={ key } style={ props }>
-              <Switch location={ item }>
-                <Route exact path="/" component={ AboutPage }/>
-                <Route exact path="/skills" component={ SkillsPage }/>
-                <Route exact path="/projects" component={ ProjectsPage }/>
-                <Route exact path="/contact" component={ ContactPage }/>
-              </Switch>
-            </animated.main>
-          ))}
+        {transitions.map(({ item, props, key }) => (
+          <animated.main key={ key } style={ props }>
+            <Switch location={ item }>
+              <Route exact path="/" component={ AboutPage }/>
+              <Route exact path="/skills" component={ SkillsPage }/>
+              <Route exact path="/projects" component={ ProjectsPage }/>
+              <Route exact path="/contact" component={ ContactPage }/>
+            </Switch>
+          </animated.main>
+        ))}
       </Suspense>
     </animated.div>
   );
