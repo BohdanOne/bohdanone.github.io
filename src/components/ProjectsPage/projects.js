@@ -23,7 +23,7 @@ const projects = [
     description: 'My personal developer portfolio page. In the project I try to explore and learn modern features of React (e.g Hooks) and Redux. I also make use of react-related libraries: react-router, react-spring. App includes my first experiments with Web Audio API. Page still under development - more features on the way!',
     imgs: [ portfolioS, portfolioM, portfolioL ],
     technologies: ['React', 'Redux', 'SCSS', 'JavaScript', 'CSS3', 'HTML5'],
-    demoUrl: 'https://https://bohdanone.github.io/',
+    demoUrl: 'https://bohdanone.github.io/',
     codeUrl: 'https://github.com/BohdanOne/bohdanone.github.io'
   },
   {
