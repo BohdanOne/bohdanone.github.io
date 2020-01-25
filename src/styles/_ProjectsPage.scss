@@ -1,16 +1,16 @@
-.ProjectsPage {
+.projects-page {
   grid-auto-rows: minmax(var(--grid-height), auto);
-  .ProjectsPage__heading {
+  .title {
     font-size: .5rem;
     font-weight: 300;
     grid-area: 2 / 1 / 3 / span 5;
   }
-  .ProjectsPage__filter {
+  .filter {
     grid-column: 1 / -1 ;
     grid-row-start: 3;
-    .ProjectsPage__filter__label {
+    .filter__label {
       font-size: .25rem;
-      .ProjectsPage__filter__select {
+      .filter__select {
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -23,11 +23,12 @@
       }
     }
   }
-  .ProjectsPage__container {
+  .projects-container {
     grid-column: 1 / -1 ;
     grid-row-start: 4;
     display: grid;
     grid-gap: 10px;
+    padding: 0 .1rem .25rem;
     .project {
       border-radius: 5px;
       box-shadow: var(--shadow);
@@ -81,24 +82,6 @@
         grid-area: nav;
         display: flex;
         justify-content: flex-end;
-        align-items: flex-start;
-        .nav__button--back-to-top {
-          border-radius: 5px;
-          box-shadow: var(--shadow);
-          cursor: pointer;
-          background: #fff;
-          font-family: inherit;
-          color: var(--primary-col);
-          padding: 0 .15rem;
-          width: min-content;
-          transition: color .2s ease-in-out;
-          &:hover {
-            color: var(--hover-col);
-          }
-          &:active {
-            box-shadow: var(--inset-shadow);
-          }
-        }
       }
     }
   }

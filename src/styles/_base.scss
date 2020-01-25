@@ -79,3 +79,21 @@ section {
   justify-items: center;
   align-items: center;
 }
+
+.back-to-top-button {
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  background: #fff;
+  font-family: inherit;
+  color: var(--primary-col);
+  padding: 0 .15rem;
+  width: min-content;
+  transition: color .2s ease-in-out;
+  &:hover {
+    color: var(--hover-col);
+  }
+  &:active {
+    box-shadow: var(--inset-shadow);
+  }
+}

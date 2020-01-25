@@ -1,29 +1,25 @@
 import React, { useState } from 'react';
-import { useTrail, animated } from 'react-spring';
+import { useTrail, animated, useSpring } from 'react-spring';
 import projectsList from './projects';
-
-const config = { mass: 5, tension: 2000, friction: 350 };
+import BackToTopButton from '../utils/BackToTopButton';
+import animationConfig from '../utils/animationConfig';
 
 export default () => {
   const [searchTerm, setSearch] = useState('');
-  let projects = !searchTerm ? projectsList : projectsList.filter(project => project.technologies.includes(searchTerm));
 
-  const trail = useTrail(projects.length, {
-    config,
-    opacity: 1,
-    x: 0,
-    height: 'auto',
-    from: { opacity: 0 , x: 500, height: 0},
-    delay: 500
-  });
+  let projects = !searchTerm ? projectsList : projectsList.filter(
+    project => project.technologies.includes(searchTerm)
+  );
+
+  const trail = useTrail(projects.length, animationConfig);
 
   return (
-  <section className="ProjectsPage">
-    <h2 className="ProjectsPage__heading">Projects</h2>
-    <div className="ProjectsPage__filter">
-      <label className="ProjectsPage__filter__label">Filter by technology:
+  <section className="projects-page">
+    <animated.h2 className="title" style={useSpring(animationConfig)}>Projects</animated.h2>
+    <animated.div className="filter" style={useSpring(animationConfig)}>
+      <label className="filter__label">Filter by technology:
         <select
-          className="ProjectsPage__filter__select"
+          className="filter__select"
           defaultValue={searchTerm}
           onChange={e => setSearch(e.target.value)}
         >
@@ -44,8 +40,8 @@ export default () => {
           <option value="Webpack">Webpack</option>
         </select>
       </label>
-    </div>
-    <div className="ProjectsPage__container">
+    </animated.div>
+    <div className="projects-container">
       { trail.map(({x, height, ...rest}, index) => (
         <animated.div
           className="project"
@@ -73,10 +69,7 @@ export default () => {
             <a className="project__link" href={ projects[index].codeUrl}>CODE</a>
           </div>
           <nav className="project__nav">
-            <button
-              className="nav__button--back-to-top"
-              onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
-            >BACK TO TOP</button>
+            <BackToTopButton />
           </nav>
         </animated.div>
       ))}
