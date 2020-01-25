@@ -14,7 +14,7 @@ export default () => {
   const transitions = useTransition(location, location => location.pathname, {
     from: { opacity: 0, transform: 'translateY(100%)' },
     enter: { opacity: 1, transform: 'translateY(0%)' },
-    leave: { opacity: .5, transform: 'translateY(-100%)'  }
+    leave: { opacity: 0, transform: 'translateY(-100%)'  }
   });
 
   return (

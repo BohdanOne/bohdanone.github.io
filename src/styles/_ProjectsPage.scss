@@ -8,15 +8,18 @@
   .ProjectsPage__filter {
     grid-column: 1 / -1 ;
     grid-row-start: 3;
-    label {
+    .ProjectsPage__filter__label {
       font-size: .25rem;
-      select {
+      .ProjectsPage__filter__select {
         appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
         border: none;
         background: transparent;
         font-family: inherit;
         font-size: .2rem;
         padding: .2rem;
+        color: var(--opposite-col);
       }
     }
   }
@@ -48,6 +51,7 @@
       .project__img {
         grid-area: img;
         width: 100%;
+        max-width: 800px;
         height: auto;
       }
       .project__description {

@@ -39,7 +39,7 @@ body {
 }
 
 a {
-  color: var(--ternary-col);
+  color: var(--primary-col);
   transition: color .2s ease-in-out;
   &:hover {
     color: var(--hover-col);

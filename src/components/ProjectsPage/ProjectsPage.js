@@ -13,7 +13,7 @@ export default () => {
     opacity: 1,
     x: 0,
     height: 'auto',
-    from: { opacity: 0 , x: 800, height: 0},
+    from: { opacity: 0 , x: 500, height: 0},
     delay: 500
   });
 
@@ -21,9 +21,13 @@ export default () => {
   <section className="ProjectsPage">
     <h2 className="ProjectsPage__heading">Projects</h2>
     <div className="ProjectsPage__filter">
-      <label>Filter by technology:
-        <select defaultValue={searchTerm} onChange={e => setSearch(e.target.value)}>
-          <option value="HTML5" >HTML5</option>
+      <label className="ProjectsPage__filter__label">Filter by technology:
+        <select
+          className="ProjectsPage__filter__select"
+          defaultValue={searchTerm}
+          onChange={e => setSearch(e.target.value)}
+        >
+          <option value="HTML5">HTML5</option>
           <option value="CSS3">CSS3</option>
           <option value="JavaScript">JavaScript</option>
           <option value="Node.js">Node.js</option>
@@ -55,7 +59,7 @@ export default () => {
             className="project__img"
             src={projects[index].imgs[0]}
             srcSet={`${projects[index].imgs[0]} 200w, ${projects[index].imgs[1]} 400w, ${projects[index].imgs[2]} 800w`}
-            sizes="(max-width: 450px) 200px, (max-width: 800px) 400px, 800px"
+            sizes="(max-width: 300px) 200px, (max-width: 400px) 400px, 800px"
             alt={`${projects[index].name} screenshot`}
           />
           <p className="project__description">
