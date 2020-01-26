@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import MainNav from './MainNav';
 import SoundToggler from './SoundToggler';
 import Hamburger from './Hamburger';
 
-const Header = () => {
+export default () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleBurger = () => setIsOpen(!isOpen);
+  const location = useLocation();
+
   return (
     <header className={ isOpen ? "Header open" : "Header" }>
       <MainNav open={ isOpen } toggleBurger={ toggleBurger } />
       <Hamburger open={ isOpen } toggleBurger={ toggleBurger }/>
-      <SoundToggler />
+      {location.pathname === '/' && <SoundToggler />}
     </header>
   );
 };
-
-export default Header;

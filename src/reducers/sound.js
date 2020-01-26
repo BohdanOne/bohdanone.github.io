@@ -1,7 +1,7 @@
 import { TOGGLE_SOUND } from '../actions/types';
 
 const INITIAL_STATE = {
-  isOn: true
+  isOn: false
 };
 
 export default function(state = INITIAL_STATE, action) {
