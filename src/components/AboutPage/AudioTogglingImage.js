@@ -23,8 +23,6 @@ const AudioTogglingImage = props => {
     return () => audio && audio.pause();
   }, [props.sound, isPlaying, audio, ctx]);
 
-
-
   const onImageInteraction = sound => {
     if (!sound) {
       noSoundNotification()
