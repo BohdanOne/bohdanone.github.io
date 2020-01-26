@@ -1,5 +1,7 @@
 .AboutPage {
   grid-template-rows: repeat(9, var(--grid-height));
+  width: 100%;
+  overflow-x: hidden;
   .hi {
     font-weight: 300;
     font-size: 1rem;
