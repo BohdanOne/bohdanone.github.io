@@ -22,7 +22,7 @@ const projects = [
     name: 'Portfolio Page',
     description: 'My personal developer portfolio page. In the project I try to explore and learn modern features of React (e.g Hooks) and Redux. I also make use of react-related libraries: react-router, react-spring. App includes my first experiments with Web Audio API. Page still under development - more features on the way!',
     imgs: [ portfolioS, portfolioM, portfolioL ],
-    technologies: ['React', 'Redux', 'SCSS', 'JavaScript', 'CSS3', 'HTML5'],
+    technologies: ['React', 'Redux', 'SASS', 'JavaScript', 'CSS3', 'HTML5'],
     demoUrl: 'https://bohdanone.github.io/',
     codeUrl: 'https://github.com/BohdanOne/bohdanone.github.io'
   },
@@ -54,7 +54,7 @@ const projects = [
     name: "What's the Weather",
     description: 'User can check actual weather condition or forecasts fetched from AccuWeather API. If user allow geolocation then app will determine his location using browsers Geolocation API. If geolocation is not allowed (or user wants to check weather for other place) there is also text search option. Ap built to practice connecting to external API and inserting fetched data in the DOM with Vanilla JS. It was also my first experiment with Geolocation API.',
     imgs: [ weatherS, weatherM, weatherL ],
-    technologies: ['JavaScript', 'CSS3', 'HTML5', 'SCSS', 'Webpack'],
+    technologies: ['JavaScript', 'CSS3', 'HTML5', 'SASS', 'Webpack'],
     demoUrl: 'https://bohdanone.github.io/whatstheweather',
     codeUrl: 'https://github.com/BohdanOne/whatstheweather'
   },
