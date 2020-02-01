@@ -16,6 +16,9 @@ import weatherL from '../../assets/images/weather-800.png';
 import portfolioS from '../../assets/images/portfolio-200.png';
 import portfolioM from '../../assets/images/portfolio-400.png';
 import portfolioL from '../../assets/images/portfolio-800.png';
+import productlyS from '../../assets/images/productly-200.png';
+import productlyM from '../../assets/images/productly-400.png';
+import productlyL from '../../assets/images/productly-800.png';
 
 const projects = [
   {
@@ -65,6 +68,14 @@ const projects = [
     technologies: ['JavaScript', 'CSS3', 'HTML5'],
     demoUrl: 'https://bohdanone.github.io/simple808',
     codeUrl: 'https://github.com/BohdanOne/simple808'
+  },
+  {
+    name: 'Productly',
+    description: 'Landing Page created in pure HTML and CSS. Based on free design found at dribbble.com',
+    imgs: [ productlyS, productlyM, productlyL ],
+    technologies: ['Webpack', 'SASS', 'CSS3', 'HTML5'],
+    demoUrl: 'https://bohdanone.github.io/productly',
+    codeUrl: 'https://github.com/BohdanOne/productly'
   }
 ];
 
