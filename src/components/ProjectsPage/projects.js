@@ -19,6 +19,9 @@ import portfolioL from '../../assets/images/portfolio-800.png';
 import productlyS from '../../assets/images/productly-200.png';
 import productlyM from '../../assets/images/productly-400.png';
 import productlyL from '../../assets/images/productly-800.png';
+import caheeS from '../../assets/images/cahee-200.png';
+import caheeM from '../../assets/images/cahee-400.png';
+import caheeL from '../../assets/images/cahee-800.png';
 
 const projects = [
   {
@@ -71,11 +74,19 @@ const projects = [
   },
   {
     name: 'Productly',
-    description: 'Landing Page created in pure HTML and CSS. Based on free design found at dribbble.com',
+    description: 'Landing Page created in pure HTML and CSS. Based on free design found at dribbble.com.',
     imgs: [ productlyS, productlyM, productlyL ],
     technologies: ['Webpack', 'SASS', 'CSS3', 'HTML5'],
     demoUrl: 'https://bohdanone.github.io/productly',
     codeUrl: 'https://github.com/BohdanOne/productly'
+  },
+  {
+    name: 'Cahee',
+    description: 'Landing Page created to practice psd to html coding. Based on free design from Weekly Webdev Challenge facebook group.',
+    imgs: [ caheeS, caheeM, caheeL ],
+    technologies: ['Webpack', 'JavaScript', 'SASS', 'CSS3', 'Bootstrap', 'HTML5'],
+    demoUrl: 'https://bohdanone.github.io/cahee/',
+    codeUrl: 'https://github.com/BohdanOne/cahee'
   }
 ];
 
