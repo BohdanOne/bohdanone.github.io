@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84bd6ed019272c51a87a8cb6540290fc",
+    "revision": "2553d8aa4589bc34da0c835647619d01",
     "url": "/index.html"
   },
   {
-    "revision": "4e67c891a2340da7e921",
+    "revision": "c110846107eb7a2a24c7",
     "url": "/static/css/main.8b2b8a37.chunk.css"
   },
   {
@@ -20,28 +20,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/3.0a10bc50.chunk.js.LICENSE"
   },
   {
-    "revision": "d3f41c7c74b04822fd14",
-    "url": "/static/js/4.a8d24d70.chunk.js"
+    "revision": "57c5e2389c3b5f6373d7",
+    "url": "/static/js/4.b180cd9c.chunk.js"
   },
   {
-    "revision": "4e02b78560b8a4caa729",
-    "url": "/static/js/5.a7d61002.chunk.js"
+    "revision": "1bbf3a03316b6fad2e6b",
+    "url": "/static/js/5.f823b82b.chunk.js"
   },
   {
-    "revision": "9acdd32b30b1bb07be1b",
-    "url": "/static/js/6.2fcc4a09.chunk.js"
+    "revision": "1f4fd0ee1489f9ac4482",
+    "url": "/static/js/6.82f8a491.chunk.js"
   },
   {
-    "revision": "3e4d44a53f3bf0d2a65a",
-    "url": "/static/js/7.e9e679b9.chunk.js"
+    "revision": "acac89e02c2cdeab0095",
+    "url": "/static/js/7.838b75d0.chunk.js"
   },
   {
-    "revision": "4e67c891a2340da7e921",
-    "url": "/static/js/main.0474b203.chunk.js"
+    "revision": "c110846107eb7a2a24c7",
+    "url": "/static/js/main.9d1f7f74.chunk.js"
   },
   {
-    "revision": "2381aa8fc9bac15d7294",
-    "url": "/static/js/runtime-main.7c3f344e.js"
+    "revision": "2c66e4c9ab4f083a5ee7",
+    "url": "/static/js/runtime-main.4e0b066c.js"
   },
   {
     "revision": "dfa4e760a50250ea966909ce0a1bf95a",
@@ -118,5 +118,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0a086d66ce62f279cd1f901aa61a0e03",
     "url": "/static/media/weather-800.0a086d66.png"
+  },
+  {
+    "revision": "f7d7ba1a71a274e09213df26b691643f",
+    "url": "/static/media/wtw-400.f7d7ba1a.png"
+  },
+  {
+    "revision": "09093c5f73486749907e7f0aae647365",
+    "url": "/static/media/wtw-800.09093c5f.png"
   }
 ]);
