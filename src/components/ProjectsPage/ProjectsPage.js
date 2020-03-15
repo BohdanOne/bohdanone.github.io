@@ -38,6 +38,7 @@ export default () => {
           <option value="Sapper">Sapper</option>
           <option value="Socket.IO">Socket.IO</option>
           <option value="Webpack">Webpack</option>
+          <option value="TypeScript">TypeScript</option>
         </select>
       </label>
     </animated.div>

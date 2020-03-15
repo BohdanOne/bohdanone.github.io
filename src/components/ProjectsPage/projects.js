@@ -22,8 +22,19 @@ import productlyL from '../../assets/images/productly-800.png';
 import caheeS from '../../assets/images/cahee-200.png';
 import caheeM from '../../assets/images/cahee-400.png';
 import caheeL from '../../assets/images/cahee-800.png';
+import wtwS from '../../assets/images/wtw-200.png';
+import wtwM from '../../assets/images/wtw-400.png';
+import wtwL from '../../assets/images/wtw-800.png';
 
 const projects = [
+  {
+    name: 'What\'s the Weather v2',
+    description: 'Remake of my weather APP. User can check actual weather and forecasts for current or chosen location. App settings allow to choose 2 languages: polish and english; and 2 modes: light and dark. It\'s my first project with TypeScript. Project contains server which formats data incoming from external APIs.',
+    imgs: [ wtwS, wtwM, wtwL ],
+    technologies: ['React', 'SASS', 'JavaScript', 'CSS3', 'HTML5', 'TypeScript', 'Node.js', 'Express.js'],
+    demoUrl: 'https://bohdanone.github.io/whats-the-weather-v2/',
+    codeUrl: 'https://github.com/BohdanOne/whats-the-weather-v2'
+  },
   {
     name: 'Portfolio Page',
     description: 'My personal developer portfolio page. In the project I try to explore and learn modern features of React (e.g Hooks) and Redux. I also make use of react-related libraries: react-router, react-spring. App includes my first experiments with Web Audio API. Page still under development - more features on the way!',
@@ -58,7 +69,7 @@ const projects = [
   },
   {
     name: "What's the Weather",
-    description: 'User can check actual weather condition or forecasts fetched from AccuWeather API. If user allow geolocation then app will determine his location using browsers Geolocation API. If geolocation is not allowed (or user wants to check weather for other place) there is also text search option. Ap built to practice connecting to external API and inserting fetched data in the DOM with Vanilla JS. It was also my first experiment with Geolocation API.',
+    description: 'User can check actual weather condition or forecasts fetched from AccuWeather API. If user allow geolocation then app will determine his location using browsers Geolocation API. If geolocation is not allowed (or user wants to check weather for other place) there is also text search option. App built to practice connecting to external API and inserting fetched data in the DOM with Vanilla JS. It was also my first experiment with Geolocation API.',
     imgs: [ weatherS, weatherM, weatherL ],
     technologies: ['JavaScript', 'CSS3', 'HTML5', 'SASS', 'Webpack'],
     demoUrl: 'https://bohdanone.github.io/whatstheweather',
