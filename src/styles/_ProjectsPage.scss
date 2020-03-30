@@ -49,8 +49,10 @@
         justify-self: start;
         margin: 0;
       }
-      .project__img {
+      .project__picture {
         grid-area: img;
+      }
+      .project__img {
         width: 100%;
         max-width: 800px;
         height: auto;
